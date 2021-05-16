@@ -9,7 +9,15 @@ export class AppComponent implements OnInit {
     // Use the component constructor to inject providers.
   }
 
+  style = 'font-size:32px;color:black'
+  homeIcon = '&#xe900;';
+
   ngOnInit(): void {
     // Init your component properties here.
+  }
+
+  onTap(componentName : string): void {
+    this.style='font-size:32px;color:red';
+    console.log(componentName);
   }
 }

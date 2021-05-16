@@ -1,8 +1,13 @@
-<ActionBar>
-  <Label text="Browse"></Label>
-</ActionBar>
+
 
 <GridLayout class="page__content">
   <Label class="page__content-icon far" text="&#xf1ea;"></Label>
   <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
 </GridLayout>
+
+<ActionBar>
+  <GridLayout columns="*,2*, auto" rows="50" >
+    <Label text="Browse" row="0" column="0"></Label>
+    <Button text="Tap me!" row="0" column="1"></Button>
+  </GridLayout>
+</ActionBar>

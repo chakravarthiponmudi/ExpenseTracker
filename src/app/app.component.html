@@ -1,13 +1,24 @@
-<TabView androidTabsPosition="bottom">
-  <GridLayout *tabItem="{ title: 'Home' }">
-    <page-router-outlet name="homeTab"></page-router-outlet>
-  </GridLayout>
+<StackLayout >
+  <Label text="&#xe991;" class="icm" style="font-size:224px" horizontalAlignment="center" verticalAlignment="center" height="93%"></Label>
+  <GridLayout columns="*,*,*" rows="*">
+    <Label col="0", row="0" horizontalAlignment="center" verticalAlignement="top" textWrap="true" (tap)="onTap('home')">
+      <FormattedString>
+        <Span text="&#xe900;\n" class="icm" style="font-size:25pt;"></Span>
+        <Span text="Home" class="icm"  style="font-size:10pt;"></Span>
+      </FormattedString>
+    </Label>
+    <Label col="1", row="0" horizontalAlignment="center" verticalAlignement="top" textWrap="true" (tap)="onTap('browse')">
+      <FormattedString>
+        <Span text="&#xe91f;" class="icm" style="font-size:25pt;"></Span>
+        <Span [text]="'\nBrowse'" class="icm" style="font-size:10pt;"></Span>
+      </FormattedString>
+    </Label>
+    <Label col="2", row="0" horizontalAlignment="center" verticalAlignement="top" textWrap="true" (tap)="onTap('search')">
+      <FormattedString>
+        <Span text="&#xe986;" class="icm" style="font-size:25pt;"></Span>
+        <Span [text]="'\nSearch'" class="icm" style="font-size:10pt;"></Span>
+      </FormattedString>
+    </Label>
 
-  <GridLayout *tabItem="{ title: 'Browse' }">
-    <page-router-outlet name="browseTab"></page-router-outlet>
   </GridLayout>
-
-  <GridLayout *tabItem="{ title: 'Search' }">
-    <page-router-outlet name="searchTab"></page-router-outlet>
-  </GridLayout>
-</TabView>
+</StackLayout>
