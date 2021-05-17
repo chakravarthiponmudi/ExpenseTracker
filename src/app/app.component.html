@@ -1,25 +1,26 @@
-<StackLayout >
-  <GridLayout columns="*,*,*" rows="10*,*">
-    <page-router-outlet row="0" col="0" colspan="3"></page-router-outlet>
-    <Label [nsRouterLink]="['/home']" clearHistory="true" col="0", row="1" horizontalAlignment="center" verticalAlignement="top" textWrap="true" (tap)="onTap('home')">
-      <FormattedString>
-        <Span text="&#xe900;\n" class="icm" style="font-size:25pt;"></Span>
-        <Span text="Home" class="icm"  style="font-size:10pt;"></Span>
-      </FormattedString>
-    </Label>
-    <Label [nsRouterLink]="['/browse']" clearHistory="true" col="1", row="1" horizontalAlignment="center" verticalAlignement="top" textWrap="true" (tap)="onTap('browse')">
-      <FormattedString>
-        <Span text="&#xe91f;" class="icm" style="font-size:25pt;"></Span>
-        <Span [text]="'\nBrowse'" class="icm" style="font-size:10pt;"></Span>
-      </FormattedString>
-    </Label>
-    <Label [nsRouterLink]="['/search']" clearHistory="true" col="2", row="1" horizontalAlignment="center" verticalAlignement="top" textWrap="true" (tap)="onTap('search')">
-      <FormattedString>
-        <Span text="&#xe986;" class="icm" style="font-size:25pt;"></Span>
-        <Span [text]="'\nSearch'" class="icm" style="font-size:10pt;"></Span>
-      </FormattedString>
-    </Label>
+<MDBottomNavigation selectedIndex="0" (selectedIndexChanged)='onSelectedIndexChanged'>
+  <MDTabStrip>
+    <MDTabStripItem>
+      <Label text="Home"></Label>
+      <Image src="font://&#xe900;" class="icm"></Image>
+    </MDTabStripItem>
+    <MDTabStripItem>
+      <Label text="Browse"></Label>
+      <Image src="font://&#xe91f;" class="icm"></Image>
+    </MDTabStripItem>
+    <MDTabStripItem>
+      <Label text="Search"></Label>
+      <Image src="font://&#xe986;" class="icm"></Image>
+    </MDTabStripItem>
+  </MDTabStrip>
 
-  </GridLayout>
-
-</StackLayout>
+  <MDTabContentItem>
+    <page-router-outlet name="home"></page-router-outlet>
+  </MDTabContentItem>
+  <MDTabContentItem>
+    <page-router-outlet name="browse"></page-router-outlet>
+  </MDTabContentItem>
+  <MDTabContentItem>
+    <page-router-outlet name="search"></page-router-outlet>
+  </MDTabContentItem>
+</MDBottomNavigation>

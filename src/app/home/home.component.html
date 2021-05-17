@@ -1,13 +1,11 @@
 <ActionBar>
   <Label text="Home"></Label>
 </ActionBar>
+<GridLayout columns="*" rows="*, *">
+  <TextField
+    [text]="inputText"
+  >
+  </TextField>
+  <Buttom (tap)="onTap"></Buttom>
+</GridLayout>
 <Label text="&#xe991;" class="icm" style="font-size:224px" horizontalAlignment="center" verticalAlignment="center" height="80%"></Label>
-<!-- <GridLayout>
-  <ListView [items]="items">
-    <ng-template let-item="item">
-      <StackLayout [nsRouterLink]="['../item', item.id]">
-        <Label [text]="item.name"></Label>
-      </StackLayout>
-    </ng-template>
-  </ListView>
-</GridLayout> -->

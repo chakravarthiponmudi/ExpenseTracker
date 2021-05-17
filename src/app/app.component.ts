@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core'
+import { SelectedIndexChangedEventData } from '@nativescript-community/ui-material-bottom-navigation';
+
+
 
 @Component({
   selector: 'ns-app',
@@ -14,6 +17,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // Init your component properties here.
+  }
+  onSelectedIndexChanged(args: SelectedIndexChangedEventData): void {
+    console.log(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`);
   }
 
   onTap(componentName : string): void {
