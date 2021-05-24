@@ -1,29 +1,37 @@
 import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
-import {HomeComponent} from './home/home.component';
-import {BrowseComponent} from './browse/browse.component';
-import {SearchComponent} from './search/search.component';
+import {BookComponent} from './book/book.component';
+import {StatsComponent} from './stats/stats.component';
+import {AccountComponent} from './account/account.component';
+import {SettingComponent} from './setting/setting.component';
+
+
 const routes: Routes = [
   {
     path: '',
-    redirectTo: "/(home:home//browse:browse//search:search)",
+    redirectTo: "/(book:book//stats:stats//accounts:accounts//settings:settings)",
     pathMatch: 'full',
   },
   {
-    path: 'home',
-    component: HomeComponent,
-    outlet: "home",
+    path: 'book',
+    component: BookComponent,
+    outlet: "book",
   },
   {
-    path: 'browse',
-    component: BrowseComponent,
-    outlet: "browse",
+    path: 'stats',
+    component: StatsComponent,
+    outlet: "stats",
   },
   {
-    path: 'search',
-    component: SearchComponent,
-    outlet: 'search',
+    path: 'accounts',
+    component: AccountComponent,
+    outlet: 'accounts',
+  },
+  {
+    path: 'settings',
+    component: SettingComponent,
+    outlet: 'settings',
   },
 ]
 

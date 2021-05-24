@@ -8,7 +8,7 @@ import { SelectedIndexChangedEventData } from '@nativescript-community/ui-materi
   templateUrl: 'app.component.html',
 })
 export class AppComponent implements OnInit {
-  constructor() {
+  constructor() { 
     // Use the component constructor to inject providers.
   }
 

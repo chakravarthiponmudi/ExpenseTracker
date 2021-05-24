@@ -1,26 +1,33 @@
 <MDBottomNavigation selectedIndex="0" (selectedIndexChanged)='onSelectedIndexChanged'>
   <MDTabStrip>
     <MDTabStripItem>
-      <Label text="Home"></Label>
-      <Image src="font://&#xe900;" class="icm"></Image>
-    </MDTabStripItem>
-    <MDTabStripItem>
-      <Label text="Browse"></Label>
+      <Label text="Book"></Label>
       <Image src="font://&#xe91f;" class="icm"></Image>
     </MDTabStripItem>
     <MDTabStripItem>
-      <Label text="Search"></Label>
-      <Image src="font://&#xe986;" class="icm"></Image>
+      <Label text="Stats"></Label>
+      <Image src="font://&#xe99c;" class="icm"></Image>
+    </MDTabStripItem>
+    <MDTabStripItem>
+      <Label text="Accounts"></Label>
+      <Image src="font://&#xe964;" class="icm"></Image>
+    </MDTabStripItem>
+    <MDTabStripItem>
+      <Label text="Settings"></Label>
+      <Image src="font://&#xe994;" class="icm"></Image>
     </MDTabStripItem>
   </MDTabStrip>
 
   <MDTabContentItem>
-    <page-router-outlet name="home"></page-router-outlet>
+    <page-router-outlet name="book"></page-router-outlet>
   </MDTabContentItem>
   <MDTabContentItem>
-    <page-router-outlet name="browse"></page-router-outlet>
+    <page-router-outlet name="stats"></page-router-outlet>
   </MDTabContentItem>
   <MDTabContentItem>
-    <page-router-outlet name="search"></page-router-outlet>
+    <page-router-outlet name="accounts"></page-router-outlet>
+  </MDTabContentItem>
+  <MDTabContentItem>
+    <page-router-outlet name="settings"></page-router-outlet>
   </MDTabContentItem>
 </MDBottomNavigation>

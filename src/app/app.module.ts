@@ -4,19 +4,21 @@ import { NativeScriptMaterialBottomNavigationModule } from "@nativescript-commun
 
 
 import { AppRoutingModule } from './app-routing.module'
-import {HomeModule} from './home/home.module'
-import { AppComponent } from './app.component'
-import {BrowseModule} from './browse/browse.module'
-import {SearchModule} from './search/search.module'
+import {BookModule} from './book/book.module'
+import {AppComponent } from './app.component'
+import {StatsModule} from './stats/stats.module'
+import {AccountModule} from './account/account.module'
+import {SettingModule} from './setting/setting.module';
 @NgModule({
   bootstrap: [AppComponent],
   imports: [
     NativeScriptMaterialBottomNavigationModule,
     NativeScriptModule,
     AppRoutingModule,
-    HomeModule,
-    BrowseModule,
-    SearchModule,
+    BookModule,
+    StatsModule,
+    AccountModule,
+    SettingModule
   ],
   declarations: [AppComponent],
   schemas: [NO_ERRORS_SCHEMA],
