@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core'
 import { SelectedIndexChangedEventData } from '@nativescript-community/ui-material-bottom-navigation';
+import {DBService} from './shared/db.service';
+
 
 
 
@@ -8,7 +10,7 @@ import { SelectedIndexChangedEventData } from '@nativescript-community/ui-materi
   templateUrl: 'app.component.html',
 })
 export class AppComponent implements OnInit {
-  constructor() { 
+  constructor(private dbService:DBService) { 
     // Use the component constructor to inject providers.
   }
 
@@ -17,6 +19,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // Init your component properties here.
+    this.dbService.createDatabase().subscribe(this.dbService.setupDb.bind(this.dbService));
+    this.dbService.log("component");
   }
   onSelectedIndexChanged(args: SelectedIndexChangedEventData): void {
     console.log(`Selected index has changed ( Old index: ${args.oldIndex} New index: ${args.newIndex} )`);
