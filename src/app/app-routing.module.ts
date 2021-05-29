@@ -5,6 +5,7 @@ import {BookComponent} from './book/book.component';
 import {StatsComponent} from './stats/stats.component';
 import {AccountComponent} from './account/account.component';
 import {SettingComponent} from './setting/setting.component';
+import { AccountSettingComponent } from './setting/accountsetting/accountsetting.component';
 
 
 const routes: Routes = [
@@ -33,7 +34,13 @@ const routes: Routes = [
     component: SettingComponent,
     outlet: 'settings',
   },
+  // {
+  //   path: 'settings/accountsetting',
+  //   component: AccountSettingComponent,
+  //   outlet: 'settings',
+  // }
 ]
+
 
 @NgModule({
   imports: [NativeScriptRouterModule.forRoot(routes)],

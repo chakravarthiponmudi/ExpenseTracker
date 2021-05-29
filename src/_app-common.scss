@@ -24,6 +24,12 @@
   font-family: 'IcoMoon-Free';
   font-weight: normal;
 }
+
+.icmcur {
+  font-family: 'icofont';
+  font-weight: normal;
+}
+
 // Custom tabstrip item class
 .navigation__item {
   &:active,
@@ -47,4 +53,22 @@
     vertical-align: top;
     margin-top: 20%;
   }
+}
+
+.sectionHeader {
+  height:90px;
+  
+  font-size:20px;
+  background-color: rgb(179, 173, 173);
+}
+.sectionItems {
+  height:90px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.pad20{
+  padding-left: 20px;
+}
+.subtext {
+  font-size: 8px;
 }

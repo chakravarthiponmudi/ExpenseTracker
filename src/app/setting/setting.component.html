@@ -2,7 +2,59 @@
   <Label text="Setting"></Label>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf002;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Search page content goes here -->"></Label>
-</GridLayout>
+<ScrollView>
+  <StackLayout>
+    <!-- TRANSACTION SETTINGS -->
+    <Label text='Transaction' class="fas sectionHeader"></Label>
+    <GridLayout rows="*,*,*" columns="*,*,20*" style="background-color:rgb(238, 238, 238);">
+      <Label row=0 col=1 text="&#xea12;" class="icmcur sectionItems"></Label>
+      <Label row=0 col=2 class="far sectionItems" textWrap="true">
+        <FormattedString>
+          <Span text="Transaction Settings&#xa;" ></Span>
+          <Span text="Monlthy Start Date, Carry-over Setting, {Peiod, Others" class="subtext"></Span>
+        </FormattedString>
+      </Label>
+       
+
+      <Label row=1 col=1 text="&#xea11;" class="icmcur sectionItems" [nsRouterlink]="[ '/settings/accountsetting']"></Label>
+      <Label row=1 col=2 class="far sectionItems"  textWrap="true">
+        <FormattedString>
+          <Span text="Repeat Settings" ></Span>
+        </FormattedString>
+      </Label>  
+
+      <Label row=2 col=1 text="&#xe964;" class="icm sectionItems"></Label>
+      <Label row=2 col=2 class="far sectionItems" textWrap="true">
+        <FormattedString>
+          <Span text="Copy-Paste Settings" ></Span>
+        </FormattedString>
+      </Label>
+    </GridLayout>
+
+
+    <Label text='Category/Accounts' class="fas sectionHeader"></Label>
+    <GridLayout rows="*,*,*" columns="*,*,20*" style="background-color:rgb(238, 238, 238);">
+      <Label row=0 col=1 text="&#xea12;" class="icmcur sectionItems"></Label>
+      <Label row=0 col=2 class="far sectionItems" textWrap="true">
+        <FormattedString>
+          <Span text="Income Category Settings" ></Span>
+        </FormattedString>
+      </Label>  
+
+      <Label row=1 col=1 text="&#xea11;" class="icmcur sectionItems"></Label>
+      <Label row=1 col=2 class="far sectionItems"  textWrap="true">
+        <FormattedString>
+          <Span text="Expense Category Settings" ></Span>
+        </FormattedString>
+      </Label>  
+
+      <Label row=2 col=1 text="&#xe964;" class="icm sectionItems" (tap)="showAccountSettings()"></Label>
+      <Label row=2 col=2 class="far sectionItems" textWrap="true" (tap)="showAccountSettings()">
+        <FormattedString>
+          <Span text="Account Settings&#xa;" ></Span>
+          <Span text="Type, Accounts, Balance, Transfer_expense Setting" class="subtext"></Span>
+        </FormattedString>
+      </Label>
+    </GridLayout>
+  </StackLayout>
+</ScrollView>
