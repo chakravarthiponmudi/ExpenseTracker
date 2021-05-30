@@ -2,11 +2,31 @@
     <Label text="Accounts"></Label>
 </ActionBar>
 <StackLayout>
-    <Label class="far sectionItems pad20"  text="Account Group"></Label>
-    <Label class="far sectionItems pad20"  text="Account Settings"></Label>
-    <Label class="far sectionItems pad20"  text="Include in totals"></Label>
-    <Label class="far sectionItems pad20"  text="Transfer-Expense Setting"></Label>
-    <Label class="far sectionItems pad20"  text="Deleted Accounts"></Label>
-    <Label class="far sectionItems pad20"  text="Card Expenses Display Config."></Label>
+    <Label
+        class="far sectionItems pad20"
+        text="Account Group"
+        [nsRouterLink]="['/', {outlets: {
+            settings: ['settings','accounttype']
+        }}]"
+    ></Label>
+    <Label
+        class="far sectionItems pad20"
+        text="Account Settings"
+    ></Label>
+    <Label
+        class="far sectionItems pad20"
+        text="Include in totals"
+    ></Label>
+    <Label
+        class="far sectionItems pad20"
+        text="Transfer-Expense Setting"
+    ></Label>
+    <Label
+        class="far sectionItems pad20"
+        text="Deleted Accounts">
+    </Label>
+    <Label
+        class="far sectionItems pad20"
+        text="Card Expenses Display Config."></Label>
 </StackLayout>
 

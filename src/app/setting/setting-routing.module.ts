@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
-import { AccountSettingComponent } from './accountsetting/accountsetting.component'
+import { AccountTypeComponent, AccountSettingComponent } from './accountsetting'
 
 const routes: Routes = [
   {
-    path: 'accountsetting',
+    path: 'settings/accountsetting',
     component: AccountSettingComponent,
     outlet: 'settings',
   },
+  {
+    path: 'settings/accounttype',
+    component: AccountTypeComponent,
+    outlet: 'settings',
+  }
 ]
 
 @NgModule({

@@ -15,6 +15,6 @@ export class SettingComponent implements OnInit {
   }
 
   showAccountSettings(){
-    this.router.navigate([ {outlets: {settings:['accountsetting']}}]).catch(err => console.log(err));
+    this.router.navigate([ {outlets: {settings:['settings','accountsetting']}}]).catch(err => console.log(err));
   }
 }
