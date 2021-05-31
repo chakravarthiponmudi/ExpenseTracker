@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core'
 import { SelectedIndexChangedEventData } from '@nativescript-community/ui-material-bottom-navigation';
 import {DBService} from './shared/db.service';
 
-
-
-
 @Component({
   selector: 'ns-app',
   templateUrl: 'app.component.html',

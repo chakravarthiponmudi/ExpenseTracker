@@ -4,6 +4,8 @@ const Sqlite = require("nativescript-sqlite")
 
 const SQL_QUERY = [
   "CREATE TABLE IF NOT EXISTS accounttype(id INTEGER PRIMARY KEY, accountType TEXT)",
+  `INSERT INTO  accounttype values(1,'Cash')`,
+  `INSERT INTO  accounttype values(2,'Savings Account')`,
   `CREATE TABLE IF NOT EXISTS account (
     id INTEGER PRIMARY KEY, 
     accountTypeId INTEGER, 
@@ -74,6 +76,10 @@ export class DBService {
     console.log('DB data is setup', db.isOpen(), this);
     this.db = db;
     this.createTables();
+  }
+
+  getDb(){
+    return this.db;
   }
 
   
