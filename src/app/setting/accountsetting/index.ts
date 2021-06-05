@@ -1,7 +1,9 @@
-import {AccountTypeComponent} from './accounttype.component';
+import {AccountType} from './accounttype.component';
 import {AccountSettingComponent} from './accountsetting.component';
+import {NewAccountType} from './newaccounttype.component';
 
 export {
-    AccountTypeComponent,
-    AccountSettingComponent
+    AccountType,
+    AccountSettingComponent,
+    NewAccountType
 }

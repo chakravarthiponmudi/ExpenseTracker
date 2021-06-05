@@ -16,4 +16,14 @@ export class AccountTypeService {
 
         return $select;
     }
+
+    createAccountType(name: string, type: string) : Observable<any> {
+
+        const $insert = from(
+            this.dbService.getDb().execSQL(
+                "insert into accounttype (name, accountType) values(?,?)",[name,type]
+            )
+        );
+        return $insert;
+    }
 }

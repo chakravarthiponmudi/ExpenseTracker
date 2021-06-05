@@ -50,6 +50,7 @@
     "@nativescript/angular": "~11.8.0",
     "@nativescript/core": "~8.0.0",
     "@nativescript/theme": "~3.0.1",
+    "@nstudio/nativescript-checkbox": "^2.0.4",
     "nativescript-sqlite": "^2.7.0",
     "reflect-metadata": "~0.1.13",
     "rxjs": "~6.6.7",

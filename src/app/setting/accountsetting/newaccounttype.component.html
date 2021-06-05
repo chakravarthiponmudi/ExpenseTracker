@@ -1,0 +1,14 @@
+<ActionBar title="Account Type" icon="" class="action-bar">
+    <NavigationButton text="Accounts" android.systemIcon="ic_menu_back"></NavigationButton>
+</ActionBar>
+
+<StackLayout>
+    <TextField hint="Account Type Name" [(ngModel)]="name"></TextField>
+    <CheckBox id="checkGeneral" checked="true"  boxType="circle" text="General"></CheckBox>
+    <CheckBox id="checkCredit" checked="false" boxType="circle" text="Apply credit card settings to the account type"></CheckBox>
+    <CheckBox id="checkDebit"  checked="false" boxType="circle" text="Apply debit card settigns to the account type"></CheckBox>
+
+    <Button text="save" (tap)="save()" style="background-color: rgb(250, 132, 77);"></Button>
+    
+</StackLayout>
+

@@ -3,9 +3,12 @@ import { from, Observable } from 'rxjs';
 const Sqlite = require("nativescript-sqlite")
 
 const SQL_QUERY = [
-  "CREATE TABLE IF NOT EXISTS accounttype(id INTEGER PRIMARY KEY, accountType TEXT)",
-  `INSERT INTO  accounttype values(1,'Cash')`,
-  `INSERT INTO  accounttype values(2,'Savings Account')`,
+  "CREATE TABLE IF NOT EXISTS accounttype(id INTEGER PRIMARY KEY, name TEXT, accountType TEXT)",
+  `INSERT INTO  accounttype values(1,'Cash','GENERAL')`,
+  `INSERT INTO  accounttype values(2,'Account','GENERAL')`,
+  `INSERT INTO  accounttype values(3,'Card','CREDIT')`,
+  `INSERT INTO  accounttype values(4,'Debit Card','DEBIT')`,
+  `INSERT INTO  accounttype values(5,'Savings','GENERAL')`,
   `CREATE TABLE IF NOT EXISTS account (
     id INTEGER PRIMARY KEY, 
     accountTypeId INTEGER, 

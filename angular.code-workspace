@@ -9,5 +9,8 @@
 		{
 			"path": "../sample-Groceries"
 		}
-	]
+	],
+	"settings": {
+		"editor.fontSize": 12
+	}
 }

@@ -1,10 +1,16 @@
-<ActionBar>
-    <Label text="Account type"></Label>
+<ActionBar title="Account Type">
+    <NavigationButton text="Accounts" android.systemIcon="ic_menu_back"></NavigationButton>
+    <ActionItem (tap)="taptest()">
+      <Button class="" text="&#xe905;" class="action-item icm"></Button>
+    </ActionItem>
+    <ActionItem (tap)="createAccount()" ios.position="right">
+      <Button class="" text="&#xea0a;" class="action-item icm"></Button>
+    </ActionItem>
 </ActionBar>
 <StackLayout>
-    <Label
+    <Label *ngFor="let accountType of accountTypes"
         class="far sectionItems pad20"
-        text="Cash"
+        [text]="accountType.name"
     ></Label>
 </StackLayout>
 
