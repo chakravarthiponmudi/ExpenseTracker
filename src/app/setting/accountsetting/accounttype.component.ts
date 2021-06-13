@@ -42,6 +42,9 @@ export class AccountType implements OnInit {
     })
   }
 
+  goback() {
+    this.router.back();
+  }
   taptest() {}
 
 }

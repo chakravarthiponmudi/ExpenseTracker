@@ -2,12 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../ps-demo"
-		},
-		{
-			"path": "../sample-Groceries"
 		}
 	],
 	"settings": {

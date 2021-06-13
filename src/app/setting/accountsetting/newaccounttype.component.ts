@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import { Page } from '@nativescript/core/ui';
 import { CheckBox } from '@nstudio/nativescript-checkbox';
 import { AccountTypeService } from '~/app/shared/accounttype.service';
+import { RouterExtensions } from "@nativescript/angular";
 
 
 @Component({
@@ -14,7 +15,10 @@ export class NewAccountType implements OnInit {
     checkDebit: Boolean = false;
     name: string;
 
-    constructor(private page: Page, private accountTypeService: AccountTypeService) {
+    constructor(private page: Page,
+        private accountTypeService: AccountTypeService,
+        private router: RouterExtensions
+    ) {
         
     }
     ngOnInit(): void {
@@ -62,10 +66,14 @@ export class NewAccountType implements OnInit {
         this.accountTypeService
             .createAccountType(this.name, this.getAccountTypeFromBooleans())
             .subscribe(data => {
-                //TODO; Goback to the previous and reload
+                console.log('Inserted data', data)
+                this.back();
             })
     }
 
+    private back() {
+        this.router.back();
+    }
     private getAccountTypeFromBooleans() {
         switch (true) {
             case this.checkGeneral:
